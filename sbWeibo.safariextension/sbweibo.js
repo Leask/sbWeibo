@@ -30,7 +30,7 @@ var sb = function() {
                 }
             }
             if (inWhiteList) {
-                break;
+                continue;
             }
         }
         domNs = domV[i].parentNode.parentNode.parentNode.parentNode.getElementsByClassName('name');
@@ -38,7 +38,7 @@ var sb = function() {
             domN = domNs[0];
             userId = domN.textContent;
             if (typeof whiteList[userId] !== 'undefined') {
-                break;
+                continue;
             }
         }
         domV[i].style.backgroundImage    = sbImage.date;
@@ -47,4 +47,4 @@ var sb = function() {
     }
 }
 
-setInterval(sb, 1000 * 7);
+setInterval(sb, 1000 * 1);
